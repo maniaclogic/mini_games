@@ -1,6 +1,7 @@
-import re
+import random
 
 words = open('words.txt', 'r').readlines()
+words = [word.replace('\n', ' ').replace('\"', ' ').strip() for word in words]
 
-for w in words:
-     w.replace(' ', '\t')
+def play_hangman():
+    
