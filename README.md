@@ -3,7 +3,7 @@ A collection of mini games amd coding challenges just for fun
 
 | Game   | Status  |
 |---|---|
-| Rock, Paper, Sissors  |  Finished 🟢 |
-| Hangman  |  Unfnished 🌕 |
+| Rock, Paper, Sissors  | 🟢 Finished  |
+| Hangman  | 🌕 Unfnished  |
 | coding_challenges  |  Ongoing |
 | katas  |  Current |
