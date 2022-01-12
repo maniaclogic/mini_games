@@ -1,5 +1,5 @@
 import pytest 
-from katas import divisors, index_of_median
+from katas import divisors, index_of_median, pangram
 
 def test_divisors():
     assert divisors(1) == 1
@@ -12,3 +12,8 @@ def test_divisors():
 def test_index_of_median():
     assert index_of_median([2, 3, 1]) == 0
     assert index_of_median([2, 14, 10]) == 2
+
+
+def test_pangram():
+    assert pangram("The quick brown fox jumps over the lazy dog") == True
+    assert pangram("Hello World") == False

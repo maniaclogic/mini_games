@@ -16,3 +16,15 @@ def index_of_median(three_nums):
     return three_nums.index(sorted(three_nums)[1])
 
 # Learnings: you can define a function like this gimme=lambda l:l.index(sorted(l)[1])
+
+####################################################
+## A pangram is a sentence that contains every single letter of the alphabet at least once.
+## Given a string, detect whether or not it is a pangram.
+
+import string
+
+def pangram(input_string):
+    return all([input_string.lower().find(i) >= 0 for i in string.ascii_lowercase])
+
+# Learnings: string.ascii_lowercase gives A-Z, find() gives index of substring in string
+# converting to set and comparing sizes is a good solution --> set(string.ascii_lowercase) <= set(s.lower())
