@@ -28,3 +28,12 @@ def pangram(input_string):
 
 # Learnings: string.ascii_lowercase gives A-Z, find() gives index of substring in string
 # converting to set and comparing sizes is a good solution --> set(string.ascii_lowercase) <= set(s.lower())
+
+####################################################
+# Given an array, find the index N where the sum of the 
+# integers to the left of N is equal to the sum of the integers 
+# to the right of N. If there is no index that would make this happen, return -1
+
+def index_equal_sum(input_array):
+    result = [i for i, _ in enumerate(input_array) if sum(input_array[i:]) == sum(input_array[:i + 1 ])]
+    return result[0] if result else -1
