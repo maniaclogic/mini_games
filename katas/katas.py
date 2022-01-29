@@ -4,8 +4,7 @@ def divisors(n):
     list_of_divs = [div for div in range(1, n+1) if n % div == 0]
     return len(list_of_divs)
 
-# Learnings: sum and xrange are faster, so sum(1 for div in xrange(1, n+1) if n % div == 0) is better
-# # also could have used lambda
+# Learnings: sum is faster and boolean evaluation counts as 1, so sum([n % x == 0 for x in range(1, n + 1)]) is better
 
 
 #####################################################
@@ -34,8 +33,8 @@ def pangram(input_string):
 # integers to the left of N is equal to the sum of the integers 
 # to the right of N. If there is no index that would make this happen, return -1
 
-def index_equal_sum(input_array):
-    result = [i for i, _ in enumerate(input_array) if sum(input_array[i:]) == sum(input_array[:i + 1 ])]
+def index_equal_sum(arr):
+    result = [i for i, _ in enumerate(arr) if sum(arr[i:]) == sum(arr[:i + 1 ])]
     return result[0] if result else -1
 
 ########################################################################
@@ -45,3 +44,9 @@ def find_average(arr):
     return 0 if not arr else sum(arr)/len(arr)
 
 # Learnings: numpy does this: "from numpy import mean as find_average" 
+
+#################################################################
+# Given an array of integers, return a new array with each value doubled.
+
+def double_array(arr):
+    return [i * 2 for i in arr]
