@@ -1,5 +1,5 @@
 import pytest 
-from katas import divisors, index_of_median, pangram, index_equal_sum
+from katas import divisors, index_of_median, pangram, index_equal_sum, find_average
 
 def test_divisors():
     assert divisors(1) == 1
@@ -24,3 +24,7 @@ def test_index_equal_sum():
     assert index_equal_sum([1,100,50,-51,1,1]) == 1
     assert index_equal_sum([1,2,3,4,5,6]) == -1
     assert index_equal_sum([20,10,30,10,10,15,35]) == 3
+
+def test_find_average():
+    assert find_average([1, 2, 3]) == 2
+    assert find_average([1, 3, 5]) == 3

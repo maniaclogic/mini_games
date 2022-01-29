@@ -37,3 +37,11 @@ def pangram(input_string):
 def index_equal_sum(input_array):
     result = [i for i, _ in enumerate(input_array) if sum(input_array[i:]) == sum(input_array[:i + 1 ])]
     return result[0] if result else -1
+
+########################################################################
+# Write a function which calculates the average of the numbers in a given list.
+
+def find_average(arr):
+    return 0 if not arr else sum(arr)/len(arr)
+
+# Learnings: numpy does this: "from numpy import mean as find_average" 
