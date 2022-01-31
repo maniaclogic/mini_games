@@ -50,3 +50,18 @@ def find_average(arr):
 
 def double_array(arr):
     return [i * 2 for i in arr]
+
+################################################################
+# Given a positive integer n written as abcd... (a, b, c, d... being digits) and a positive integer p
+# we want to find a positive integer k, if it exists, such as the 
+# sum of the digits of n taken to the successive powers of p is equal to k * n.
+# If it is the case we will return k, if not return -1.
+
+def dig_pow(abc, p):
+    digits = [ int(a) for a in str(abc) ]
+    powers = list(range(p, p + len(digits)))
+    return digits, powers
+
+print(dig_pow(89, 1))
+print(dig_pow(695, 2))
+print(dig_pow(46288, 3))
