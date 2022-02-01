@@ -1,5 +1,5 @@
 import pytest 
-from katas import divisors, index_of_median, pangram, index_equal_sum, find_average, double_array
+from katas import divisors, index_of_median, pangram, index_equal_sum, find_average, double_array, dig_pow
 
 def test_divisors():
     assert divisors(1) == 1
@@ -33,3 +33,9 @@ def test_double_array():
     assert double_array([1, 2, 3]) == [2, 4, 6]
     assert double_array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]) == [0, 2, 4, 6, 8, 10, 12, 14, 16, 18]
     assert double_array([0, 0, 0]) == [0, 0, 0]
+
+def test_dig_power():
+    assert dig_pow(89, 1) == 1
+    assert dig_pow(92, 1) == -1
+    assert dig_pow(695, 2) == 2
+    assert dig_pow(46288, 3) == 51

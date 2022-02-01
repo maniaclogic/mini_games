@@ -60,7 +60,10 @@ def double_array(arr):
 def dig_pow(abc, p):
     digits = [ int(a) for a in str(abc) ]
     powers = list(range(p, p + len(digits)))
-    return digits, powers
+    dig_to_power_results = sum([ digit ** power for digit, power in list(zip(digits, powers)) ])
+
+
+    return dig_to_power_results
 
 print(dig_pow(89, 1))
 print(dig_pow(695, 2))
