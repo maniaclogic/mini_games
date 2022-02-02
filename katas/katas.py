@@ -56,15 +56,11 @@ def double_array(arr):
 # we want to find a positive integer k, if it exists, such as the 
 # sum of the digits of n taken to the successive powers of p is equal to k * n.
 # If it is the case we will return k, if not return -1.
+import math
 
-def dig_pow(abc, p):
-    digits = [ int(a) for a in str(abc) ]
+def dig_pow(n, p):
+    digits = [ int(a) for a in str(n) ]
     powers = list(range(p, p + len(digits)))
-    dig_to_power_results = sum([ digit ** power for digit, power in list(zip(digits, powers)) ])
-
-
-    return dig_to_power_results
-
-print(dig_pow(89, 1))
-print(dig_pow(695, 2))
-print(dig_pow(46288, 3))
+    dig_to_power_result = sum([ digit ** power for digit, power in list(zip(digits, powers)) ])
+    frac, k = math.modf(dig_to_power_result/n)
+    return int(k) if k != 0.0 and frac == .0 else -1
