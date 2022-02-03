@@ -1,5 +1,5 @@
 import pytest 
-from katas import divisors, index_of_median, pangram, index_equal_sum, find_average, double_array, dig_pow
+from katas import divisors, index_of_median, pangram, index_equal_sum, find_average, double_array, dig_pow, f_greet, s_greet, format_greet
 
 def test_divisors():
     assert divisors(1) == 1
@@ -39,3 +39,11 @@ def test_dig_power():
     assert dig_pow(92, 1) == -1
     assert dig_pow(695, 2) == 2
     assert dig_pow(46288, 3) == 51
+
+def test_f_greet():
+    assert f_greet("Kat") == "Hello, Kat how are you doing today?"
+def test_s_greet():
+    assert f_greet("Lisa") == "Hello, Lisa how are you doing today?"
+def test_format_greet():
+    assert f_greet("Lola") == "Hello, Lola how are you doing today?"
+

@@ -1,3 +1,27 @@
+####################################################
+# Given an array, find the index N where the sum of the 
+# integers to the left of N is equal to the sum of the integers 
+# to the right of N. If there is no index that would make this happen, return -1
+
+def index_equal_sum(arr):
+    result = [i for i, _ in enumerate(arr) if sum(arr[i:]) == sum(arr[:i + 1 ])]
+    return result[0] if result else -1
+
+################################################################
+# Given a positive integer n written as abcd... (a, b, c, d... being digits) and a positive integer p
+# we want to find a positive integer k, if it exists, such as the 
+# sum of the digits of n taken to the successive powers of p is equal to k * n.
+# If it is the case we will return k, if not return -1.
+import math
+
+def dig_pow(n, p):
+    digits = [ int(a) for a in str(n) ]
+    powers = list(range(p, p + len(digits)))
+    k = sum([ int(digit) ** power for digit, power in list(zip(digits, powers)) ])
+    return k//n if k%n==0 else -1
+
+#Learnings: should repeat the above. Not a good solution
+
 ## Count the number of divisors of a positive integer n.
 
 def divisors(n):
@@ -5,7 +29,6 @@ def divisors(n):
     return len(list_of_divs)
 
 # Learnings: sum is faster and boolean evaluation counts as 1, so sum([n % x == 0 for x in range(1, n + 1)]) is better
-
 
 #####################################################
 ## Create a function that returns the index of the 
@@ -28,15 +51,6 @@ def pangram(input_string):
 # Learnings: string.ascii_lowercase gives A-Z, find() gives index of substring in string
 # converting to set and comparing sizes is a good solution --> set(string.ascii_lowercase) <= set(s.lower())
 
-####################################################
-# Given an array, find the index N where the sum of the 
-# integers to the left of N is equal to the sum of the integers 
-# to the right of N. If there is no index that would make this happen, return -1
-
-def index_equal_sum(arr):
-    result = [i for i, _ in enumerate(arr) if sum(arr[i:]) == sum(arr[:i + 1 ])]
-    return result[0] if result else -1
-
 ########################################################################
 # Write a function which calculates the average of the numbers in a given list.
 
@@ -51,16 +65,19 @@ def find_average(arr):
 def double_array(arr):
     return [i * 2 for i in arr]
 
-################################################################
-# Given a positive integer n written as abcd... (a, b, c, d... being digits) and a positive integer p
-# we want to find a positive integer k, if it exists, such as the 
-# sum of the digits of n taken to the successive powers of p is equal to k * n.
-# If it is the case we will return k, if not return -1.
-import math
+########################
+# String Formatting options 
+# f string
 
-def dig_pow(n, p):
-    digits = [ int(a) for a in str(n) ]
-    powers = list(range(p, p + len(digits)))
-    dig_to_power_result = sum([ digit ** power for digit, power in list(zip(digits, powers)) ])
-    frac, k = math.modf(dig_to_power_result/n)
-    return int(k) if k != 0.0 and frac == .0 else -1
+def f_greet(name):
+    return f"Hello, {name} how are you doing today?"
+
+# % string
+
+def s_greet(name):
+    return "Hello, %s how are you doing today?" % name
+
+# str.format()
+
+def format_greet(name):
+    return "Hello, {} how are you doing today?".format(name)
