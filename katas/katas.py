@@ -90,5 +90,8 @@ def format_greet(name):
 # Don't change the order of the elements that are left.
 # https://www.codewars.com/kata/563cf89eb4747c5fb100001b
 
-def remove_smallest(arr):
-    pass
+def remove_smallest(numbers):
+    arr = numbers.copy()
+    if arr:
+        arr.remove(min(numbers))
+    return arr
