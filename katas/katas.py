@@ -95,3 +95,5 @@ def remove_smallest(numbers):
     if arr:
         arr.remove(min(numbers))
     return arr
+
+# Smart alternative: return [numbers[i] for i in range(len(numbers)) if i != numbers.index(min(numbers))]
