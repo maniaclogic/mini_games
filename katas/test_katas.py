@@ -1,5 +1,5 @@
 import pytest 
-from katas import divisors, index_of_median, pangram, index_equal_sum, find_average, double_array, dig_pow, f_greet, s_greet, format_greet, remove_smallest
+from katas import divisors, index_of_median, pangram, index_equal_sum, find_average, double_array, dig_pow, f_greet, s_greet, format_greet, remove_smallest, unique_in_order
 
 def test_divisors():
     assert divisors(1) == 1
@@ -51,3 +51,8 @@ def test_remove_smallest():
     assert remove_smallest([1,2,3,4,5]) == [2,3,4,5]
     assert remove_smallest([5,3,2,1,4]) == [5,3,2,4]
     assert remove_smallest([2,2,1,2,1]) == [2,2,2,1]
+
+def test_unique_in_order():
+    assert unique_in_order('AAAABBBCCDAABBB') == ['A', 'B', 'C', 'D', 'A', 'B']
+    assert unique_in_order('ABBCcAD')         == ['A', 'B', 'C', 'c', 'A', 'D']
+    assert unique_in_order([1,2,2,3,3])       == [1,2,3]
