@@ -105,4 +105,4 @@ def remove_smallest(numbers):
 
 
 def unique_in_order(iterable):
-    pass
+    return [i for c, i in enumerate(iterable) if iterable[c-1] != i]
