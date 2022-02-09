@@ -57,3 +57,4 @@ def test_unique_in_order():
     assert unique_in_order('ABBCcAD')         == ['A', 'B', 'C', 'c', 'A', 'D']
     assert unique_in_order([1,2,2,3,3])       == [1,2,3]
     assert unique_in_order('AA')              == ['A']
+    assert unique_in_order('A')               == ['A']
