@@ -105,4 +105,6 @@ def remove_smallest(numbers):
 
 
 def unique_in_order(iterable):
-    return [i for c, i in enumerate(iterable) if iterable[c-1] != i]
+    return [i for c, i in enumerate(iterable) if c == 0 or iterable[c-1] != i]
+
+# itertools has a funciton groupby which enables us to do: return [i for (i, _) in groupby(iterable)]
