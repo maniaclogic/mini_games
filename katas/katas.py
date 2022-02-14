@@ -114,4 +114,10 @@ def unique_in_order(iterable):
 # order while leaving the even numbers at their original positions.
 
 def sort_odd(arr):
-    odd = [i for i in arr if i % 2 != 0]
+    odd = sorted([i for i in arr if i % 2 != 0])
+    # for index, a in enumerate(arr):
+    #     if a % 2 != 0:
+    #         arr[index] == odd[0]
+    #         odd.remove(odd[0])
+
+    return odd
