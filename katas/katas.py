@@ -114,10 +114,13 @@ def unique_in_order(iterable):
 # order while leaving the even numbers at their original positions.
 
 def sort_odd(arr):
-    odd = sorted([i for i in arr if i % 2 != 0])
-    # for index, a in enumerate(arr):
-    #     if a % 2 != 0:
-    #         arr[index] == odd[0]
-    #         odd.remove(odd[0])
+    odd = [[c, e] for c, e in enumerate(arr) if e % 2 != 0]
+    odd_indices = [c[0] for c in odd ]
+    nums = sorted([e[1] for e in odd])
+    for i in range(len(nums)):
+        arr[odd_indices[i]] = nums[i]
+    return arr
 
-    return odd
+#   odds = sorted((x for x in arr if x%2 != 0), reverse=True) 
+  # return [x if x%2==0 else odds.pop() for x in arr]
+  # keep element if its even else take the last element from the odd pile and input it instead. Works because its reversed
