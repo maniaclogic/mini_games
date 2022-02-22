@@ -1,3 +1,13 @@
+#########################################################
+# Persistent Bugger
+# Write a function, that takes in a positive 
+# parameter num and returns its multiplicative persistence, 
+# which is the number of times you must multiply the digits in 
+# num until you reach a single digit.
+
+def persistence(num):
+    pass
+
 ####################################################
 # Given an array, find the index N where the sum of the 
 # integers to the left of N is equal to the sum of the integers 

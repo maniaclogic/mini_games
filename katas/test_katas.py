@@ -1,5 +1,12 @@
+from katas.katas import persistence
 import pytest 
 from katas import *
+
+
+def test_persistence():
+    assert persistence(39) == 3
+    assert persistence(999) == 4
+    assert persistence(4) == 0 #return 0 upon already single digit
 
 def test_divisors():
     assert divisors(1) == 1
