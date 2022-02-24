@@ -1,12 +1,18 @@
 #########################################################
-# Persistent Bugger
 # Write a function, that takes in a positive 
 # parameter num and returns its multiplicative persistence, 
 # which is the number of times you must multiply the digits in 
 # num until you reach a single digit.
+import numpy
 
 def persistence(num):
-    pass
+    count = 0
+    while num > 9:
+        num = numpy.prod([int(s) for s in str(num)])
+        count += 1
+    return count
+
+#persistence = lambda n,c=0: persistence(reduce(lambda x,y:int(x)*int(y),str(n)),c+1) if n >=10 else c
 
 ####################################################
 # Given an array, find the index N where the sum of the 

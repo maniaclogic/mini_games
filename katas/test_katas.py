@@ -1,4 +1,3 @@
-from katas.katas import persistence
 import pytest 
 from katas import *
 
