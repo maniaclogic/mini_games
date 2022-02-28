@@ -74,3 +74,11 @@ def test_filter_list():
     assert filter_list([1,2,'a','b']) == [1,2]
     assert filter_list([1,'a','b',0,15]) == [1,0,15]
     assert filter_list([1,2,'aasf','1','123',123]) == [1,2,123]
+
+def test_remove_exclamation_marks():
+    assert remove_exclamation_marks("HALLO!") == "HALLO"
+    assert remove_exclamation_marks("!Hall!o!") == "Hallo"
+    assert remove_exclamation_marks("@#%!^*#") == "@#%^*#"
+    assert remove_exclamation_marks("Hallo") == "Hallo"
+    assert remove_exclamation_marks("!!!") == ""
+    assert remove_exclamation_marks("") == ""
