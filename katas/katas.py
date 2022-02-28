@@ -157,3 +157,7 @@ def remove_exclamation_marks(s):
 # Complete the square sum function so that it squares each number passed into it and then sums the results together.
 def square_sum(numbers):
     return sum([i**2 for i in numbers])
+
+##################################################
+# Grasshopper - Grade book
+# Complete the function so that it finds the average of the three scores passed to it and returns the letter value associated with that grade.
