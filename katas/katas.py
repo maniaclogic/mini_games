@@ -151,4 +151,4 @@ def filter_list(arr):
 # Write a function which removes all exclamation marks from a given string.
 
 def remove_exclamation_marks(s):
-    pass
+    return s.replace("!", "")
