@@ -140,3 +140,8 @@ def sort_odd(arr):
 #   odds = sorted((x for x in arr if x%2 != 0), reverse=True) 
   # return [x if x%2==0 else odds.pop() for x in arr]
   # keep element if its even else take the last element from the odd pile and input it instead. Works because its reversed
+
+# create a function that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
+
+def filter_list(arr):
+    return [i for i in arr if type(i) == int]

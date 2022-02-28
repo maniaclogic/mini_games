@@ -69,3 +69,8 @@ def test_sort_odd():
     assert sort_odd([7, 1])  ==  [1, 7]
     assert sort_odd([5, 8, 6, 3, 4])  ==  [3, 8, 6, 5, 4]
     assert sort_odd([9, 8, 7, 6, 5, 4, 3, 2, 1, 0])  ==  [1, 8, 3, 6, 5, 4, 7, 2, 9, 0]
+
+def test_filter_list():
+    assert filter_list([1,2,'a','b']) == [1,2]
+    assert filter_list([1,'a','b',0,15]) == [1,0,15]
+    assert filter_list([1,2,'aasf','1','123',123]) == [1,2,123]
