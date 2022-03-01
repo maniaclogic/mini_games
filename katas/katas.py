@@ -161,3 +161,10 @@ def square_sum(numbers):
 ##################################################
 # Grasshopper - Grade book
 # Complete the function so that it finds the average of the three scores passed to it and returns the letter value associated with that grade.
+
+##################################################
+# You will be given a number and you will need to return it as a string in Expanded Form
+
+def expanded_form(num):
+    r = [i + ("0" * (len(str(num)) - (e + 1))) for e, i in enumerate(str(num)) if i != "0"]
+    return " + ".join(r)
