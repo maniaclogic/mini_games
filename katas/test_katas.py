@@ -87,3 +87,11 @@ def test_expanded_form():
     assert expanded_form(12) == '10 + 2'
     assert expanded_form(42) == '40 + 2'
     assert expanded_form(70304) == '70000 + 300 + 4'
+
+def test_get_grade():
+        assert grade_calculation(95, 90, 93) == "A"
+        assert grade_calculation(100, 85, 96) == "A"
+        assert grade_calculation(70, 70, 100) == "B"
+        assert grade_calculation(70, 70, 70) == "C"
+        assert grade_calculation(65, 70, 59) == "D"
+        assert grade_calculation(44, 55, 52) == "F"

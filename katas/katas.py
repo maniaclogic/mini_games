@@ -162,7 +162,7 @@ def square_sum(numbers):
 # Grasshopper - Grade book
 # Complete the function so that it finds the average of the three scores passed to it and returns the letter value associated with that grade.
 
-def grade_calculation(arr):
+def grade_calculation(n1, n2, n3):
     pass
 
 ##################################################
