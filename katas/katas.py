@@ -189,3 +189,6 @@ def expanded_form(num):
 def DNA_strand(dna):
     bases = {'A':'T', 'T':'A', 'C':'G', 'G':'C'}
     return ''.join([bases[i] for i in dna])
+
+# if you import string lib you cna do:
+# dna.translate(string.maketrans('ATCG', 'TAGC'))
