@@ -181,3 +181,11 @@ def grade_calculation(n1, n2, n3):
 def expanded_form(num):
     r = [i + ("0" * (len(str(num)) - (e + 1))) for e, i in enumerate(str(num)) if i != "0"]
     return " + ".join(r)
+
+##################################################
+# In DNA strings, symbols "A" and "T" are complements of each other, as "C" and "G". 
+# You function receives one side of the DNA, you need to return the other complementary side. 
+
+def DNA_strand(dna):
+    bases = {'A':'T', 'T':'A', 'C':'G', 'G':'C'}
+    return ''.join([bases[i] for i in dna])
