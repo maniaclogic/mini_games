@@ -73,7 +73,7 @@ def pangram(input_string):
 def find_average(arr):
     return 0 if not arr else sum(arr)/len(arr)
 
-# Learnings: numpy does this: "from numpy import mean as find_average" 
+# Learnings: numpy does this: "from numpy import grade as find_average" 
 
 #################################################################
 # Given an array of integers, return a new array with each value doubled.
@@ -163,7 +163,17 @@ def square_sum(numbers):
 # Complete the function so that it finds the average of the three scores passed to it and returns the letter value associated with that grade.
 
 def grade_calculation(n1, n2, n3):
-    pass
+    grade = (n1 + n2 + n3) / 3 
+    if grade >= 90: return 'A'
+    if grade >= 80: return 'B'
+    if grade >= 70: return 'C'
+    if grade >= 60: return 'D'
+    return 'F'
+
+# Nice solution: return {6:'D', 7:'C', 8:'B', 9:'A', 10:'A'}.get((s1 + s2 + s3) / 30, 'F')
+# An overengineered solution that also works: def get_grade(*s):
+# return 'FFFFFFDCBAA'[sum(s)//30]
+
 
 ##################################################
 # You will be given a number and you will need to return it as a string in Expanded Form
