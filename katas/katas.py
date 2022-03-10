@@ -193,3 +193,4 @@ def DNA_strand(dna):
 # if you import string lib you cna do:
 # dna.translate(string.maketrans('ATCG', 'TAGC'))
 #################################################
+# Habit
