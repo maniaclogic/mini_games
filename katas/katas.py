@@ -194,3 +194,8 @@ def DNA_strand(dna):
 # dna.translate(string.maketrans('ATCG', 'TAGC'))
 #################################################
 # Habit
+
+def longer_if_else(simple_answer):
+    if simple_answer == "Longer": return "Long"
+    if simple_answer == "Shorter": return "Short"
+    if simple_answer == "Medium": return simple_answer
