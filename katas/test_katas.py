@@ -95,3 +95,15 @@ def test_get_grade():
         assert grade_calculation(70, 70, 70) == "C"
         assert grade_calculation(65, 70, 59) == "D"
         assert grade_calculation(44, 55, 52) == "F"
+
+def test_fancy_funcitonality():
+    if True:
+        pytest.skip("Evaluates to True")
+ # Is costlier than:
+@pytest.mark.skipif(True)
+def test_will_be_skipped():
+    assert "Hello" == "hello"
+
+@pytest.skip
+def test_also_skips():
+    pass
